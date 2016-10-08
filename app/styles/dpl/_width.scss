@@ -1,0 +1,116 @@
+$screen_sm: 768px;
+$screen_md: 992px;
+$screen_lg: 1200px;
+.container{
+	width: 970px;
+	margin: 0 auto;
+	&::after,&::before{
+		content: '';
+		display: table;
+		line-height: 0;
+	}
+	&::after{
+		clear: both;
+	}
+}
+@for $i from 1 to 13{
+	.span#{$i}{
+		width:  8.3333333333% * $i;
+		float: left;
+	}
+}
+@media screen and (min-width: $screen_sm){
+	.container{
+		width: 750px;
+		@for $i from 0 to 12{
+			.pc-span#{$i+1}{
+				width: 8.3333333333% * ($i + 1);
+				float: left;
+				&::after,&::before{
+					content: "";
+					display: table;
+					line-height: 0;
+				}
+				&::after{
+					clear: both;
+				}
+			}
+		}
+		@for $i from 0 to 12{
+			.pc-offset-span#{$i+1}{
+				width: 8.3333333333% * ($i + 1);
+				float: left;
+			}
+		}
+	}
+}
+@media screen and (min-width: $screen_md){
+	.container{
+		width: 970px;
+		@for $i from 0 to 12{
+			.pc-span#{$i+1}{
+				width: 8.3333333333% * ($i + 1);
+				float: left;
+				&::after,&::before{
+					content: "";
+					display: table;
+					line-height: 0;
+				}
+				&::after{
+					clear: both;
+				}
+			}
+		}
+		@for $i from 0 to 12{
+			.pc-offset-span#{$i+1}{
+				width: 8.3333333333% * ($i + 1);
+				float: left;
+			}
+		}
+	}
+}
+@media screen and (min-width: $screen_lg){
+	.container{
+		width: 1170px;
+		@for $i from 0 to 12{
+			.pc-span#{$i+1}{
+				width: 8.3333333333% * ($i + 1);
+				float: left;
+				&::after,&::before{
+					content: "";
+					display: table;
+					line-height: 0;
+				}
+				&::after{
+					clear: both;
+				}
+			}
+		}
+		@for $i from 0 to 12{
+			.pc-offset-span#{$i+1}{
+				width: 8.3333333333% * ($i + 1);
+				float: left;
+			}
+		}
+	}
+}
+@media screen and (max-width: $screen_sm){
+	.container{
+		width: 100%;
+		padding: 0 10px;
+		&::after,&::before{
+			content: "";
+			display: table;
+			line-height: 0;
+		}
+		&::after{
+			clear: both;
+		}
+		@for $i from 1 to 13{
+			.ph-span#{$i}{
+				width:  8.3333333333% * $i;
+				float: left;
+			}
+		}
+	}
+}

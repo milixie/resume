@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	font-family: microsoft yahei,tahoma,arial,\5b8b\4f53,sans-serif;
+}
+body{
+	background: #fafafa;
+}
+ul,ol,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{	
+	font-weight: 600;
+	font-family: microsoft yahei;
+}
+h1{
+	font-size: 36px;
+}
+h2{
+	font-size: 28px;
+}
+h3{
+	font-size: 24px;
+}
+p{
+	font-family: microsoft yahei;
+	font-size: 16px;
+}
+
+@import "compass/css3";
+@import "dpl/_width.scss";
+@import "dpl/_img.scss";
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+.text-zh{
+	text-indent: 2em;
+}
+.clearfix{
+	*zoom: 1;
+}
+.clearfix::after,.clearfix::before{
+	content: "";
+	display: table;
+	line-height: 0;
+}
+.clearfix::after{
+	clear: both;
+}
+.clear{
+	clear: both;
+}
+.learn-more{
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	background: rgba(43,45,68,0.4);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#662B2D44,endColorstr=#662B2D44);
+	padding: 10px;
+	border: 3px solid #d1c8b9;
+	font-size: 28px;
+	@include border-radius(6px);
+	text-align: center;
+	cursor: pointer;
+	&:hover{
+		background: rgba(43,45,68,0.8);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C82B2D44,endColorstr=#C82B2D44);
+	}
+	a{
+		color: #fff;
+	}
+}
+@media screen and (max-width: 768px){
+	h3{
+		font-size: 18px;
+	}
+}
